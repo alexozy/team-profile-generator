@@ -1,0 +1,30 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "\"\"",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexozy/team-profile-generator.git"
+  },
+  "keywords": [
+    "empty"
+  ],
+  "author": "\"\".",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexozy/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/alexozy/team-profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^9.1.4",
+    "jest": "^29.3.1"
+  }
+}
