@@ -1,10 +1,10 @@
 
 function init() {
 // Put your required packages here:
-const inquirer = require ('inquirer');
-const fs = require("fs");
-const path = require("path");
-const filePath = path.join(fileDirectory, "index.html");
+const inquirer = require('inquirer');
+const fs = require('fs');
+const path = require('path');
+const filePath = path.join(fileDirectory, 'index.html');
 
 
 // Modules & path
@@ -27,32 +27,25 @@ inquirer
        {
         type: "input",
         name: "name",
-        message: ""
+        message: "Please provide the employee name:"
        },
        {
         type: "input",
         name: "email",
-        message: ""
-       },
-       {
-        type: "input",
-        name: "role",
-        message: ""
-       }, 
-       {
-        type: "input",
-        name: "",
-        message: ""
+        message: "Please provide the employee email:"
        },
        {
         type: "list",
-        name: "",
-        message: ""
+        name: "role",
+        message: "Please define the employee's role:",
+        choices: ["Intern", "Manager", "Engineer"],
+       }, 
+       {
+        type: "input",
+        name: "id",
+        message: "Please provide the employee's unique ID:"
        },
-
-
-
-
-
     ])
 }
+
+init();
