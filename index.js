@@ -1,10 +1,9 @@
-
-function init() {
+function init (){
 // Put your required packages here:
-const inquirer = require('inquirer');
+const inquirer = import('inquirer');
 const fs = require('fs');
 const path = require('path');
-const filePath = path.join(fileDirectory, 'index.html');
+// const filePath = path.join(fileDirectory, 'index.html');
 
 
 // Modules & path
