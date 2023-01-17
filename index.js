@@ -1,10 +1,9 @@
-function init (){
+
 // Put your required packages here:
-const inquirer = import('inquirer');
+const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path');
 // const filePath = path.join(fileDirectory, 'index.html');
-
 
 // Modules & path
 const Employee = require("./lib/Employee")
@@ -13,11 +12,12 @@ const Engineer = require("./lib/Engineer")
 const Manager = require("./lib/Manager")
 const genHTML = require("./lib/generateHTML")
 
+// we will need an empty array for the input employees
+const teamArray = [];
 
+// now let's make our questions:
 
-inquirer
-// questions prompt
-    .prompt([
+const questions = [
  // type: "list"
         // name: ""
         // message: ""
@@ -44,7 +44,4 @@ inquirer
         name: "id",
         message: "Please provide the employee's unique ID:"
        },
-    ])
-}
-
-init();
+    ]
