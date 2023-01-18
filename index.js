@@ -44,15 +44,28 @@ const questions = [
     },
 ]
 
-// Create the required prompts for the intern here
+// Create the required prompts for the intern here | requires school input
 intQuest = [
     {
-
+        type: "input",
+        name: "school",
+        message: "Please input the intern's school:",
+        // we need something to make this field required:
+        validate: school => {
+            // insert your if statement here for no input message
+            if (school){
+                return true;
+            } else {
+                console.log ("School name is required!")
+                return false;
+            }
+        }
     }
 ]
 
 
-// Create the required prompts for the Manager here
+// Create the required prompts for the Manager here| requires their officeNumber
+
 mgmtQuest = [
     {
 
