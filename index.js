@@ -17,78 +17,55 @@ const genHTML = require("./lib/generateHTML")
 // We will need an empty array for the input-ed employees
 const teamArray = [];
 
+
+// we have 3 roles of employees please make questions for each role:
+// I want to try the function init () approach similar to last challenge, i believe it will work here
 const questions = [
     {
         type: "input",
         name: "name",
         message: "Please provide the employee name:"
-       },
-       {
+    },
+    {
         type: "input",
         name: "email",
         message: "Please provide the employee email:"
-       },
-       {
-           type: "input",
-           name: "id",
-           message: "Please provide the employee's unique ID:"
-        },
-        {
-         type: "list",
-         name: "role",
-         message: "Please define the employee's role:",
-         choices: ["Intern", "Manager", "Engineer"],
-        }, 
+    },
+    {
+        type: "input",
+        name: "id",
+        message: "Please provide the employee's unique ID:"
+    },
+    {
+        type: "list",
+        name: "role",
+        message: "Please define the employee's role:",
+        choices: ["Intern", "Manager", "Engineer"],
+    },
 ]
 
-    
-// now let's make our function and .prompt the questions:
- // we have 3 roles of employees please make questions for each role:
- // I want to try the function init () approach similar to last challenge, i believe it will work here
- // example: type: "list"
-        // name: ""
-        // message: ""
-        // choices: [array of choices] *if needed*
+// Create the required prompts for the intern here
+intQuest = [
+    {
 
-//  Intern Goes here : inQuest
-
-//         inQuest = []
-// // Manager goes here: manQuest
-//         manQuest = []
-// // Engineer goes here: engQuest
-//         engQuest = []
+    }
+]
 
 
+// Create the required prompts for the Manager here
+mgmtQuest = [
+    {
+
+    }
+]
+
+// Create the required prompts for the Engineer here
+engQuest = [
+    {
+
+    }
+]
 
 
-//     function init () {
-//         inquirer
-//         .prompt ([
-//             {
-//                 type: "input",
-//                 name: "name",
-//                 message: "Please provide the employee name:"
-//                },
-//                {
-//                 type: "input",
-//                 name: "email",
-//                 message: "Please provide the employee email:"
-//                },
-//                {
-//                    type: "input",
-//                    name: "id",
-//                    message: "Please provide the employee's unique ID:"
-//                 },
-//                 {
-//                  type: "list",
-//                  name: "role",
-//                  message: "Please define the employee's role:",
-//                  choices: ["Intern", "Manager", "Engineer"],
-//                 }, 
 
-//         ])
-// // your write to HTML will go here
-//         .then(() => {});
-
-//     }
-//     init ();
+// Place the function to cycle through prompts here
