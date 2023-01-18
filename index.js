@@ -68,17 +68,39 @@ intQuest = [
 
 mgmtQuest = [
     {
-
+        type: "input",
+        name: "officeNumber",
+        message: "Insert this manager's office number:",
+        // we need something to make this field required:
+        validate: officeNumber => {
+            // insert your if statement here for no input message
+            if (officeNumber){
+                return true;
+            } else {
+                console.log ("An office number is required!")
+                return false;
+            }
+        }
     }
 ]
 
-// Create the required prompts for the Engineer here
+// Create the required prompts for the Engineer here | their github is required!
 engQuest = [
     {
-
+        type: "input",
+        name: "github",
+        message: "Please disclose the Engineer's github username:",
+        // we need something to make this field required:
+        validate: github => {
+            // insert your if statement here for no input message
+            if (github){
+                return true;
+            } else {
+                console.log ("A github username is required!")
+                return false;
+            }
+        }
     }
 ]
-
-
 
 // Place the function to cycle through prompts here
