@@ -40,6 +40,8 @@ const questions = [
          choices: ["Intern", "Manager", "Engineer"],
         }, 
 ]
+
+    
 // now let's make our function and .prompt the questions:
  // we have 3 roles of employees please make questions for each role:
  // I want to try the function init () approach similar to last challenge, i believe it will work here
