@@ -98,12 +98,23 @@ const addNew = () =>{
         },
     ])
     .then (userInput =>{
-        let{role, name, ID, email, school, github, addOne} = userInput;
+        let{role, name, ID, email, school, officeNumber, github, addOne} = userInput;
         let employee;
-// TODO give the respective inputs a home | if statements
-        if(role === "Manager"){} 
-        if(role === "Engineer"){}
-        if(role === "Intern"){}
+// TODO give the respective inputs a home | use if statements
+        if(role === "Manager"){
+            employee = new Manager(name, ID, email, officeNumber);
+            console.log(employee)
+        } 
+        if(role === "Engineer"){
+            employee = new Engineer( name, ID, email, github);
+            console.log(employee)
+        }
+        if(role === "Intern"){
+            employee = new Intern(name, ID, email, school);
+            console.log(employee)
+        }
+        // push to squad array
+        squad.push(employee);
 
     })
 }
