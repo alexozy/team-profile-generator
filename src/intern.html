@@ -1,1 +1,12 @@
 <!-- intern styling needed for generated html -->
+<div class="card bg-secondary">
+    <h2 class="card-header text-center text-warning"> {{ name }} </h2>
+        <h4 class="card-body text-center text-white"> Your {{ role}}
+            <span> 
+                <ion-icon name="school-outline"></ion-icon>
+            </span>
+        </h4>
+        <div class="card-footer bg-warning"> ID: {{ id }} </div>
+        <div class="card-footer bg-light"> Email: <a href ="mailto:{{ email }}"></a> {{ email }} </div>
+            <div class="card-footer bg-light"> School: {{ school }} </div>
+</div>

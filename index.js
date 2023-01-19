@@ -31,7 +31,7 @@ const addNew = () =>{
             type: "list",
             name: "role",
             message: "Please define the employee's role:",
-            choices: ["Intern", "Manager", "Engineer"],
+            choices: ["Manager", "Intern", "Engineer"],
         },
         {
             type: "input",
@@ -128,6 +128,28 @@ const addNew = () =>{
     })
 }
 
+// we need a function that generates an HTML file
+// .then((response) => {
+//     console.log("Your READEME file is generating!")
+//     return fs.writeFileSync(path.join(process.cwd(), "NEW.md"), generateMarkdown(response));
+// });
+
+const writeHTML = data =>{
+    console.log (" Generating Your HTML!")
+    fs.writeHTML("./dist/newIndex.html", data, err=>{
+        if(err){
+            console.log(err)
+        } else {
+            console.log("Your SQUAD was created! Look for an newIndex.html file!")
+        }
+    })
+}
 
 // Don't forget to call your function!
-addNew();
+addNew()
+    .then(squad => {
+        return genHTML(squad);
+    })
+    .then(newHTML=>{
+        return writeHTML(newHTML);
+    })
