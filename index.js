@@ -110,46 +110,75 @@ const addNew = () =>{
             name: "id",
             message: "Please provide the employee's unique ID:",
         },
+        // TODO Create the required prompts for the Engineer here | their github is required!
+            // validate: officeNumber => {
+        //     // insert your if statement here for no input message
+        //     if (officeNumber){
+        //         return true;
+        //     } else {
+        //         console.log ("An office number is required!")
+        //         return false;
+        //     }
+        // }
         {
             type: "input",
             name: "officeNumber",
             when: (input) => input.role === "Manager",
             message: "Please insert the Manager's officeNumber:",
+            validate: officeNumber => {
+                if(officeNumber){
+                    return true;
+                } else {
+                    console.log("An Office Number is Required!")
+                };
+                return false;
+            },
         },
-        // Create the required prompts for the Engineer here | their github is required!
         {
             type: "input",
             name: "github",
             when: (input)=> input.role === "Engineer",
             message: "Please provide the Engineer's github username:",
+            validate: github => {
+                if(github){
+                    return true;
+                } else {
+                    console.log("Github is Required!")
+                };
+                return false;
+            },
         },
         {
             type: "input",
             name: "school",
             when: (input)=> input.role === "Intern",
             message: "Please provide the name of the Intern's school:",
+            validate: school => {
+                if(school){
+                    return true;
+                } else {
+                    console.log("School is Required!")
+                };
+                return false;
+            },
         },
         {
             type: "confirm",
             name: "addOne",
-            message: "Do you need to add another member of your squad?"
+            message: "Do you have another squad member?",
+            default: false
         },
     ])
     .then (userInput =>{
-        let{role, name, ID, email, school, github, addOne}
+        let{role, name, ID, email, school, github, addOne} = userInput;
+        let employee;
+// give the respective inputs a home
+
     })
 }
 
-// validate: officeNumber => {
-//     // insert your if statement here for no input message
-//     if (officeNumber){
-//         return true;
-//     } else {
-//         console.log ("An office number is required!")
-//         return false;
-//     }
-// }
+
 
 
 // Don't forget to call your function!
-memberAdd();
+addNew();
