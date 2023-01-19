@@ -18,7 +18,7 @@ const squad = [];
 
 // Place the function to cycle through prompts here
 const addNew = () =>{
-    console.log ('Build Your Squad')
+    console.log ('Build Your Squad!')
      // TODO Create the required prompts for the Engineer here | their github is required! example below
             // validate: officeNumber => {
         //     // insert your if statement here for no input message
@@ -100,7 +100,9 @@ const addNew = () =>{
     .then (userInput =>{
         let{role, name, ID, email, school, officeNumber, github, addOne} = userInput;
         let employee;
+
 // TODO give the respective inputs a home | use if statements
+
         if(role === "Manager"){
             employee = new Manager(name, ID, email, officeNumber);
             console.log(employee)
@@ -116,10 +118,15 @@ const addNew = () =>{
         // push to squad array
         squad.push(employee);
 
+    // need the addNew to loop
+        if(addOne){
+            return addNew(squad)
+        }else {
+            return squad;
+        }
+
     })
 }
-
-
 
 
 // Don't forget to call your function!
