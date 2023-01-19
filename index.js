@@ -136,7 +136,7 @@ const addNew = () =>{
 
 const writeHTML = data =>{
     console.log (" Generating Your HTML!")
-    fs.writeHTML("./dist/newIndex.html", data, err=>{
+    fs.writeFileSync("./dist/newIndex.html", data, err=>{
         if(err){
             console.log(err)
         } else {
