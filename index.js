@@ -128,7 +128,7 @@ const addNew = () =>{
     })
 }
 
-// we need a function that generates an HTML file
+// we need a function that generates an HTML file example from previous project below
 // .then((response) => {
 //     console.log("Your READEME file is generating!")
 //     return fs.writeFileSync(path.join(process.cwd(), "NEW.md"), generateMarkdown(response));
