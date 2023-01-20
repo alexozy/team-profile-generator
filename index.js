@@ -98,21 +98,21 @@ const addNew = () =>{
         },
     ])
     .then (userInput =>{
-        let{role, name, ID, email, school, officeNumber, github, addOne} = userInput;
+        let{name, role, id, email, school, officeNumber, github, addOne} = userInput;
         let employee;
 
 // TODO give the respective inputs a home | use if statements
 
         if(role === "Manager"){
-            employee = new Manager(name, ID, email, officeNumber);
+            employee = new Manager(name, role, id, email, officeNumber);
             console.log(employee)
         } 
         if(role === "Engineer"){
-            employee = new Engineer( name, ID, email, github);
+            employee = new Engineer( name, role, id, email, github);
             console.log(employee)
         }
         if(role === "Intern"){
-            employee = new Intern(name, ID, email, school);
+            employee = new Intern(name, role, id, email, school);
             console.log(employee)
         }
         // push to squad array
@@ -140,7 +140,6 @@ const writeHTML = data =>{
         if(err){
             console.log(err)
         } else {
-            console.log("Your SQUAD was created! Look for an newIndex.html file!")
         }
     })
 }
@@ -152,4 +151,5 @@ addNew()
     })
     .then(newHTML=>{
         return writeHTML(newHTML);
+        console.log("Your SQUAD was created! Look for an newIndex.html file!")
     })
