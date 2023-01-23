@@ -17,8 +17,46 @@ const genHTML = require("./lib/generateHTML")
 const squad = [];
 
 // Place the function to cycle through prompts here
+// split the function into one for Manager & New Employees
+
+const createMgmt = () => {
+    return inquirer.prompt ([
+        {
+            type: "input",
+            name: "name",
+            message: "Please provide the manager's name:",
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "Please provide the manager's email:",
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "Please provide the manager's unique ID:",
+        },
+        {
+            type: "input",
+            name: "officeNumber",
+            message: "Please insert the Manager's officeNumber:",
+            validate: officeNumber => {
+                if(officeNumber){
+                    return true;
+                } else {
+                    console.log("An Office Number is Required!")
+                };
+                return false;
+            },
+        },
+    ])
+    .then(managerInfo => {
+        const {name, email, id, officeNumber} = managerInfo;
+        
+    })
+}
 const addNew = () =>{
-    console.log ('Build Your Squad!')
+    console.log ('Now Build Your Squad!')
      // TODO Create the required prompts for the Engineer here | their github is required! example below
             // validate: officeNumber => {
         //     // insert your if statement here for no input message
@@ -30,22 +68,8 @@ const addNew = () =>{
         {
             type: "list",
             name: "role",
-            message: "Please define the employee's role:",
-            choices: ["Manager", "Intern", "Engineer"],
-        },
-        {
-            type: "input",
-            name: "officeNumber",
-            when: (input) => input.role === "Manager",
-            message: "Please insert the Manager's officeNumber:",
-            validate: officeNumber => {
-                if(officeNumber){
-                    return true;
-                } else {
-                    console.log("An Office Number is Required!")
-                };
-                return false;
-            },
+            message: "Please select an employee type:",
+            choices: ["Intern", "Engineer"],
         },
         {
             type: "input",
@@ -145,7 +169,8 @@ const writeHTML = data =>{
 }
 
 // Don't forget to call your function!
-addNew()
+createMgmt()
+    .then (addNew)
     .then(squad => {
         return genHTML(squad);
     })
