@@ -20,6 +20,7 @@ const squad = [];
 // split the function into one for Manager & New Employees
 
 const createMgmt = () => {
+    console.log("Build-A-Squad! Assign Your Squad Manager:")
     return inquirer.prompt ([
         {
             type: "input",
@@ -52,13 +53,15 @@ const createMgmt = () => {
     ])
     .then(managerInfo => {
         const {name, email, id, officeNumber} = managerInfo;
-        
+        const manager = new Manager (name, email, id, officeNumber);
+        squad.push(manager);
+        console.log(manager); 
     })
 }
 const addNew = () =>{
     console.log ('Now Build Your Squad!')
-     // TODO Create the required prompts for the Engineer here | their github is required! example below
-            // validate: officeNumber => {
+     //required! example below
+        // validate: officeNumber => {
         //     // insert your if statement here for no input message
         //     if (officeNumber){
         //         return true;
@@ -122,15 +125,10 @@ const addNew = () =>{
         },
     ])
     .then (userInput =>{
-        let{name, role, id, email, school, officeNumber, github, addOne} = userInput;
+        let{name, role, id, email, school, github, addOne} = userInput;
         let employee;
 
 // TODO give the respective inputs a home | use if statements
-
-        if(role === "Manager"){
-            employee = new Manager(name, role, id, email, officeNumber);
-            console.log(employee)
-        } 
         if(role === "Engineer"){
             employee = new Engineer( name, role, id, email, github);
             console.log(employee)
