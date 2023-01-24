@@ -36,8 +36,10 @@ This application is under MIT
 
 ## Live Application
 
-* [Screencastify Recording](https://watch.screencastify.com/v/scAJNzS39FHiqrFXi2Ex)
-* Application Mock up
+[Screencastify Recording](https://watch.screencastify.com/v/scAJNzS39FHiqrFXi2Ex)
+
+
+## Application Mock up
     ![Still image of live application Work Day Scheduler.](./Assets/images/127.0.0.1_5500_dist_newIndex.html.png)
 
 
