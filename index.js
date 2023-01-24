@@ -53,7 +53,7 @@ const createMgmt = () => {
     ])
     .then(managerInfo => {
         const {name, email, id, officeNumber} = managerInfo;
-        const manager = new Manager (name, email, id, officeNumber);
+        const manager = new Manager (name, id, email, officeNumber);
         squad.push(manager);
         console.log(manager); 
     })
@@ -130,11 +130,11 @@ const addNew = () =>{
 
 // TODO give the respective inputs a home | use if statements
         if(role === "Engineer"){
-            employee = new Engineer( name, role, id, email, github);
+            employee = new Engineer( name, id, email, github);
             console.log(employee)
         }
         if(role === "Intern"){
-            employee = new Intern(name, role, id, email, school);
+            employee = new Intern(name, id, email, school);
             console.log(employee)
         }
         // push to squad array
