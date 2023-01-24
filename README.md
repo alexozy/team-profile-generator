@@ -35,8 +35,7 @@ const inquirer = require('inquirer');
 This application is under MIT
 
 ## Live Application
-
-[Screencastify Recording](https://watch.screencastify.com/v/scAJNzS39FHiqrFXi2Ex)
+ ![Screencastify Recording](https://watch.screencastify.com/v/scAJNzS39FHiqrFXi2Ex)
 
 
 ## Application Mock up
