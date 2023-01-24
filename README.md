@@ -1,40 +1,61 @@
-[![License: MIT] (https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/MIT)
+ ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## **Description**
+
+This project highlights a Node.js command-line application that uses employee data to generate the application "Build-A-Squad". Employee cards are created with respect styling to show off the different members of the users' squad.
+
 ## Table of Contents
-    [Description](#description)
-    [Installation](#installation)
-    [Usage](#usage)
-    [License](#license)
-    [Contributors](#contributors)
-    [Test](#tests)
-    [Questions](#questions)
+  * [Description](#description)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Live Application](#liveapplication)
+  * [Contributors](#contributors)
+  * [Test](#tests)
+  * [Questions](#questions)
+
 ## Installation
-     In order to install this application, the user would first need to INSTALL the code to  your terminal inside your unique repository. Utilize "npm init" on your command line terminal. To install your Inquirer enter ```npm install inquirer``` . To run the program enter ```node index.js``` .
      
-*Please see the example code below:*
-    `/`/`/`JavaScript
-    
-    npm init
-
-    npm install inquirer
-
-    const inquirer = require('inquirer');
-
-    `/`/`
+     ```
+     npm i
+     ```
 
 ## Usage
 
+```
+npm install inquirer
+
+<!-- code for JS file -->
+
+const inquirer = require('inquirer');
+
+```
 ## License
+
+This application is under MIT
+
+## Live Application
+
+* [Screencastify Recording](https://watch.screencastify.com/v/scAJNzS39FHiqrFXi2Ex)
+* Application Mock up
+    ![Still image of live application Work Day Scheduler.](./Assets/images/127.0.0.1_5500_dist_newIndex.html.png)
+
+
 
 ## Contributors
 
+    Please clone code to your local repo to contribute! Make sure to make any commits on a separate branch, please!
+
 ## Test
 
-## Questions
-    If you have questions please reach me at:
-    **GitHub**
-    https://alexozy.github.io/team-profile-generator
+```
 
-    **Email**
-    alexanoz@outlook.com
+npm install jest --save-dev 
+
+```
+
+## Questions
+
+Follow my Github https://alexozy.github.io/team-profile-generator.
+
+If you want to contact me you can reach me at alexanoz@outlook.com .
